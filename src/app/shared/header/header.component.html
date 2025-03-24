@@ -1,0 +1,23 @@
+<header class="navbar">
+
+    <mat-icon class="menu-toggle" (click)="toggleMenu()">menu</mat-icon>
+   <div class="logo">
+    <span>sati</span>
+   </div>
+
+   <nav class="nav-links" [class.active]="menuOpen">
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/shop" routerLinkActive="active">Shop</a>
+    <!-- <a routerLink="/sale" routerLinkActive="active">Sale</a>
+    <a routerLink="/bestsellers" routerLinkActive="active">Bestsellers</a> -->
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+   </nav>
+   <div class="icons">
+    <mat-icon>search</mat-icon>
+    <mat-icon>person</mat-icon>
+    <div class="cart-icon">
+      <mat-icon>shopping_bag</mat-icon>
+      <span *ngIf="cartItemCount > 0" class="cart-badge">{{ cartItemCount }}</span>
+    </div>
+  </div>
+</header>
